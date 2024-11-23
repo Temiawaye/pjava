@@ -4,23 +4,25 @@ public class shop {
     public static void main(String[] args) {
         Scanner shop = new Scanner(System.in);
 
-        System.out.println("Enter Product:");
+        System.out.print("Enter Product:");
         String Product = shop.nextLine();
-        System.out.println("Enter Price:");
+        System.out.print("Enter Price:");
         int price = shop.nextInt();
-        System.out.println("Number of Available Products:");
+        System.out.print("Number of Available Products:");
         int numofProducts = shop.nextInt();
         shop.nextLine(); // Consume newline character
         int x = numofProducts;
 
         for (int i = 0; i < x; i++) {
-            System.out.println("Enter Customer " + (i + 1) + " Name:"  );
+
+            // int t = numofProducts - Qty;
+            System.out.print("Enter Customer " + (i + 1) + " Name:"  );
             String customerName = shop.nextLine();
 
             System.out.println("Description:");
             String description = shop.nextLine();
 
-            System.out.println("Enter Qty:");
+            System.out.print("Enter Qty:");
             int Qty = shop.nextInt();
 
             System.out.println("-----------------------------------------------");
@@ -36,13 +38,13 @@ public class shop {
             
             int productLeft = numofProducts - Qty;
             int y = productLeft;
-            System.out.print("Nmmber of " + Product + "left: " + productLeft);
+            System.out.println("Nmmber of " + Product + "left: " + productLeft);
             shop.nextLine();
             
             if (productLeft == 0) {
                 System.out.println("Out of stock for " + Product);
+                break;
             }
-            break;
         }
 
         // System.out.println("Enter Customer Name");
